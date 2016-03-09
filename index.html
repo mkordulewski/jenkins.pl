@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Jenkins
+    </title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <meta content='Jenkins is an open source automation server' name='description'>
+    <link href='sites/default/files/jenkins_favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <link href='css/style.css' media='screen' rel='stylesheet'>
+</head>
+<body>
+<a href='https://github.com/jenkinsci'>
+    <img alt='Fork us on GitHub' src='https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png'
+         style='position: absolute; top: 0; right: 0; border: 0;'>
+</a>
+
+<div class='clearfloat' id='head'>
+    <div class='clearfloat'>
+        <div id='logo'>
+            <a href='/' title='Jenkins'>
+                <img src='images/header_logo.png'>
+            </a>
+
+            <div id='tagline'>
+                An extendable open source automation server
+            </div>
+        </div>
+    </div>
+    <!-- starting partial legacy/navbar.html.haml -->
+    <div class='clearfloat' id='navbar'>
+        <div id='page-bar'>
+            <ul class='menu'>
+                <li class='leaf first'>
+                    <a href='/2.0' title='Jenkins 2.0'>
+                        2.0 Preview
+                    </a>
+                </li>
+                <li class='leaf'>
+                    <a href='/node' title='Blog'>
+                        Blog
+                    </a>
+                </li>
+                <li class='expanded'>
+                    <a href='/' title=''>
+                        Participate
+                    </a>
+                    <ul class='menu'>
+                        <li class='leaf first'>
+                            <a href='/content/mailing-lists'
+                               title='Browse Jenkins mailing list archives and/or subscribe to lists'>
+                                Mailing Lists
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/content/chat' title='Chat with the rest of the Jenkins community on IRC'>
+                                Chat
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='https://twitter.com/jenkinsci' title='Check out @jenkinsci on Twitter'>
+                                Twitter
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/content/event-calendar' title='Calendar for Jenkins events'>
+                                Event Calendar
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='https://wiki.jenkins-ci.org/display/JENKINS/Office+Hours'
+                               title='Hangouts-based online meeting'>
+                                Office Hours
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='http://jenkins.meetup.com/' title='Meetups'>
+                                Meetups
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='https://reddit.com/r/jenkinsci'
+                               title='Latest Jenkins related news on /r/jenkinsci'>
+                                /r/jenkinsci
+                            </a>
+                        </li>
+                        <li class='leaf last'>
+                            <a href='https://wiki.jenkins-ci.org/display/JENKINS/Google+Summer+Of+Code+2016'
+                               title='Google Summer of Code'>
+                                Google Summer of Code
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class='expanded'>
+                    <a href='/' title='View use-case specific docs'>
+                        Use-cases
+                    </a>
+                    <ul class='menu'>
+                        <li class='leaf'>
+                            <a href='/solutions/android'>
+                                Android
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/solutions/c'>
+                                C/C++
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/solutions/docker'>
+                                Docker
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/solutions/embedded'>
+                                Embedded
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/solutions/github'>
+                                GitHub
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/solutions/java'>
+                                Java
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/solutions/pipeline'>
+                                Continuous Delivery
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/solutions/python'>
+                                Python
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='/solutions/ruby'>
+                                Ruby
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class='expanded'>
+                    <a href='/' title='Contribute to project'>
+                        Resources
+                    </a>
+                    <ul class='menu'>
+                        <li class='leaf first'>
+                            <a href='https://wiki.jenkins-ci.org/display/JENKINS/Issue+Tracking'
+                               title='JIRA for Jenkins'>
+                                Bug Tracker
+                            </a>
+                        </li>
+                        <li class='leaf'>
+                            <a href='https://wiki.jenkins-ci.org/' title='Jenkins Wiki'>
+                                Wiki
+                            </a>
+                        </li>
+                        <li class='leaf last'>
+                            <a href='https://ci.jenkins-ci.org/' title='Jenkins own Jenkins install'>
+                                CI
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class='leaf'>
+                    <a href='/conduct' title='Jenkins project Code of Conduct'>
+                        Conduct
+                    </a>
+                </li>
+                <li class='leaf'>
+                    <a href='/press' title='Jenkins press information'>
+                        Press
+                    </a>
+                </li>
+                <li class='leaf'>
+                    <a href='/donate' title='Donate to Jenkins'>
+                        Donate
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ending partial legacy/navbar.html.haml -->
+</div>
+<div class='clearfloat' id='page'>
+    <div class='clearfloat' id='top'>
+        <div id='sidebar'>
+            <!-- starting partial sidebar.html.haml -->
+            <div class='block block-block even' id='block-block-5'>
+                <h3>
+                    What is Jenkins?
+                </h3>
+
+                <div class='content'>
+                    <p>
+                        In a nutshell, Jenkins is the leading open source automation server.
+                        Built with Java, it provides
+                        <strong>
+                            hundreds
+                        </strong>
+                        of plugins to support building, testing, deploying and automation
+                        for virtually any project
+                    </p>
+                </div>
+            </div>
+            <!-- starting partial legacy/download.html.haml -->
+            <link href='assets/bower/jquery-ui/themes/base/all.css' media='screen' rel='stylesheet'>
+            <script src='assets/bower/jquery/jquery.min.js'></script>
+            <script src='assets/bower/jquery-ui/jquery-ui.min.js'></script>
+            <link href='css/download.css' media='screen' rel='stylesheet'>
+            <div class='block block-block even' id='block-block-15'>
+                <h3>
+                    Download
+                </h3>
+
+                <div class='content'>
+                    <div id='download-tabs'>
+                        <ul class='tab-bar'>
+                            <li>
+                                <a href='#release'>
+                                    Release
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#stable'>
+                                    Long-Term Support Release
+                                </a>
+                            </li>
+                        </ul>
+                        <div class='tab' id='release'>
+                            <dl>
+                                <dt>
+                                    Java Web Archive (.war)
+                                </dt>
+                                <dd>
+                                    <div>
+                                        <a href='http://mirrors.jenkins-ci.org/war/latest/jenkins.war'>
+                                            <strong>
+                                                Latest:
+                                                1.652
+                                            </strong>
+                                        </a>
+                                    </div>
+                                    <div class='release-block-small'>
+                                        <a href='/changelog'>
+                                            changelog
+                                        </a>
+                                        |
+                                        <a href='http://mirrors.jenkins-ci.org/war/'>
+                                            past releases
+                                        </a>
+                                    </div>
+                                </dd>
+                                <dt>Native packages</dt>
+                                <dd class='release-block-platforms'>
+                                    <div>
+                                        <img src='images/os/win_other.png'>
+                                        <a class='release-block-soft'
+                                           href='http://mirrors.jenkins-ci.org/windows/latest'
+                                           onclick="return downloadWithThanks('/content/thank-you-downloading-windows-installer')">Windows</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/ubuntu.png'>
+                                        <a class='release-block-soft' href='http://pkg.jenkins-ci.org/debian/'>Ubuntu/Debian</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/redhat.png'>
+                                        <a class='release-block-soft' href='http://pkg.jenkins-ci.org/redhat/'>Red
+                                            Hat/Fedora/CentOS</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/os_macosx.png'>
+                                        <a class='release-block-soft' href='http://mirrors.jenkins-ci.org/osx/latest'
+                                           onclick="return downloadWithThanks('/content/thank-you-downloading-os-x-installer')">Mac
+                                            OS X</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/opensuse.png'>
+                                        <a class='release-block-soft' href='http://pkg.jenkins-ci.org/opensuse/'>openSUSE</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/freebsd.png'>
+                                        <a class='release-block-soft' href='http://www.freshports.org/devel/jenkins'>FreeBSD</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/os_openbsd.png'>
+                                        <a class='release-block-soft' href='http://openports.se/devel/jenkins/devel'>OpenBSD</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/os_gentoo.png'>
+                                        <a class='release-block-soft'
+                                           href='https://packages.gentoo.org/packages/dev-util/jenkins-bin'>Gentoo</a>
+                                        </img>
+                                    </div>
+                                </dd>
+                                <dt>Docker</dt>
+                                <dd id='release-block-platforms'>
+                                    <div>
+                                        <a class='release-block-soft'
+                                           href='https://registry.hub.docker.com/u/jenkinsci/jenkins/'>
+                                            <tt>docker pull jenkinsci/jenkins</tt>
+                                        </a>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class='tab' id='stable'>
+                            <dl>
+                                <dt>Java Web Archive (.war)</dt>
+                                <dd style='margin-bottom:1em'>
+                                    <div>
+                                        <a href='http://mirrors.jenkins-ci.org/war-stable/latest/jenkins.war'>
+                                            <strong>
+                                                Older but stable:
+                                                1.642.2
+                                            </strong>
+                                        </a>
+                                    </div>
+                                    <div class='release-block-small' style='text-align:right'>
+                                        <a class='release-block-soft' href='/changelog-stable'>changelog</a>
+                                        |
+                                        <a class='release-block-soft' href='http://mirrors.jenkins-ci.org/war-stable/'>past
+                                            releases</a>
+                                        |
+                                        <a class='release-block-soft' href='/stable-rc'>RC</a>
+                                    </div>
+                                    <br>
+
+                                    <div style='text-align:right'>
+                                        <a href='https://wiki.jenkins-ci.org/display/JENKINS/LTS+Release+Line'>
+                                            <strong>What is LTS?</strong>
+                                        </a>
+                                    </div>
+                                </dd>
+                                <dt>Native packages</dt>
+                                <dd class='release-block-platforms'>
+                                    <div>
+                                        <img src='images/os/win_other.png'>
+                                        <a class='release-block-soft'
+                                           href='http://mirrors.jenkins-ci.org/windows-stable/latest'
+                                           onclick="return downloadWithThanks('/content/thank-you-downloading-windows-installer#stable')">Windows</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/ubuntu.png'>
+                                        <a class='release-block-soft' href='http://pkg.jenkins-ci.org/debian-stable/'>Ubuntu/Debian</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/redhat.png'>
+                                        <a class='release-block-soft' href='http://pkg.jenkins-ci.org/redhat-stable/'>Red
+                                            Hat/Fedora/CentOS</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/os_macosx.png'>
+                                        <a class='release-block-soft'
+                                           href='http://mirrors.jenkins-ci.org/osx-stable/latest'
+                                           onclick="return downloadWithThanks('/content/thank-you-downloading-os-x-installer#stable')">Mac
+                                            OS X</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/opensuse.png'>
+                                        <a class='release-block-soft' href='http://pkg.jenkins-ci.org/opensuse-stable/'>openSUSE</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/freebsd.png'>
+                                        <a class='release-block-soft'
+                                           href='http://www.freshports.org/devel/jenkins-lts'>FreeBSD</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/os_openbsd.png'>
+                                        <a class='release-block-soft' href='http://openports.se/devel/jenkins/stable'>OpenBSD</a>
+                                        </img>
+                                    </div>
+                                    <div>
+                                        <img src='images/os/os_gentoo.png'>
+                                        <a class='release-block-soft'
+                                           href='https://packages.gentoo.org/packages/dev-util/jenkins-bin'>Gentoo</a>
+                                        </img>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dt>Docker</dt>
+                            <dd id='release-block-platforms'>
+                                <div>
+                                    <a class='release-block-soft' href='https://registry.hub.docker.com/_/jenkins/'>
+                                        <tt>docker pull jenkins</tt>
+                                    </a>
+                                </div>
+                            </dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function () {
+                    if (window.location.pathname == '/changelog-stable' || window.location.pathname == '/stable-rc') {
+                        $("#download-tabs").tabs({selected: 1});
+                    } else {
+                        $("#download-tabs").tabs();
+                    }
+                    $("#download-tabs, #download-tabs .ui-tabs-nav, #download-tabs .ui-tabs-nav > *")
+                            .removeClass("ui-corner-all ui-corner-top");
+                });
+
+                function downloadWithThanks(href) {
+                    window.location = href;
+                    return false;
+                }
+            </script>
+            <style>
+                .ui-widget {
+                    font-family: inherit !important;
+                }
+
+                .ui-widget-content {
+                    color: inherit !important;
+                }
+
+                .ui-widget-content .tab a {
+                    color: #D24939 !important;
+                }
+            </style>
+
+            <!-- ending partial legacy/download.html.haml -->
+            <!-- starting partial legacy/book.html.haml -->
+            <div class='block block-block even' id='block-block-15'>
+                <div class='content'>
+                    <center>
+                        <a href='http://www.wakaleo.com/books/jenkins-the-definitive-guide'>
+                            <img alt='Jenkins: The Definitive Guide' border='0'
+                                 src='https://agentdero.cachefly.net/continuousblog/images/jenkins-cover-small.png'
+                                 width='220'>
+                        </a>
+                        <br>
+                        <a href='http://oreilly.com/catalog/0636920010326'>
+                            <strong>
+                                Buy the book!
+                            </strong>
+                        </a>
+                    </center>
+                </div>
+            </div>
+
+            <!-- ending partial legacy/book.html.haml -->
+            <!-- starting partial legacy/resources.html.haml -->
+            <div class='block block-block odd' id='block-block-8'>
+                <h3>
+                    Resources
+                </h3>
+
+                <div class='content'>
+                    <big>
+                        <p>
+                            <a href='/calendar'>
+                                Calendar
+                            </a>
+                        </p>
+
+                        <p>
+                            <a href='https://wiki.jenkins-ci.org/'>
+                                Wiki
+                            </a>
+                        </p>
+
+                        <p>
+                            <a href='https://issues.jenkins-ci.org/'>
+                                Issues
+                            </a>
+                        </p>
+
+                        <p>
+                            <a href='http://ci.jenkins-ci.org/'>
+                                Jenkins-on-Jenkins
+                            </a>
+                        </p>
+                    </big>
+                </div>
+            </div>
+
+            <!-- ending partial legacy/resources.html.haml -->
+
+            <!-- ending partial sidebar.html.haml -->
+            <!-- starting partial legacy/blogrollup.html.haml -->
+            <div class='block block-block even' id='block-block-15'>
+                <h3>
+                    Recent Blog Posts
+                </h3>
+
+                <div class='content'>
+                    <div class='item-list'>
+                        <ul>
+                            <li class='post'>
+                                <a href='/blog/2016/03/03/gsoc2016-announcement/'>
+                                    Jenkins joins the Google Summer of Code 2016
+                                </a>
+                            </li>
+                            <li class='post'>
+                                <a href='/blog/2016/03/02/toulousejam-hackergarten/'>
+                                    Jenkins Hackergarten : mercredi 9 mars 2016 à Toulouse
+                                </a>
+                            </li>
+                            <li class='post'>
+                                <a href='/blog/2016/02/29/jenkins2-alphas/'>
+                                    Jenkins 2.0 alphas released
+                                </a>
+                            </li>
+                            <li class='post'>
+                                <a href='/blog/2016/02/24/jenkins-security-update/'>
+                                    Jenkins security updates
+                                </a>
+                            </li>
+                            <li class='post'>
+                                <a href='/blog/2016/02/19/january-2016-sf-jam/'>
+                                    January 2016 San Francisco JAM Report
+                                </a>
+                            </li>
+                            <li class='post'>
+                                <a href='/blog/2016/02/06/scale14x-conference-report/'>
+                                    SCaLE 14x Conference Report
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ending partial legacy/blogrollup.html.haml -->
+        </div>
+        <div class='main-content with-sidebar' id='content'>
+            <div id='content-top'>
+                <style>
+                    /*kill off unwanted crafts */
+                    #content H1, DIV.taxonomy {
+                        display: none;
+                    }
+
+                    #content DIV.node {
+                        border-bottom: none;
+                    }
+
+                    #welcome #directory {
+                        padding-top: 2em;
+                    }
+
+                    #welcome #directory A {
+                        text-decoration: none !important;
+                    }
+
+                    #welcome #directory A:link {
+                        text-decoration: none !important;
+                    }
+
+                    #welcome #directory A:hover {
+                        text-decoration: underline;
+                        color: black;
+                    }
+
+                    #welcome #directory .title {
+                        color: black;
+                        font-weight: bold;
+                        font-size: 1.5em;
+                    }
+
+                    #welcome #directory TD {
+                        vertical-align: middle;
+                        padding-bottom: 3em;
+                    }
+
+                    #welcome #directory .description {
+                        color: gray;
+                    }
+
+                    #welcome #directory .logo {
+                        border: 0px;
+                        margin-right: 1em;
+                    }
+                </style>
+                <div id='welcome'>
+                    <div align='center' class='content'>
+                        <table id='directory' style='border: none;' valign='middle'>
+                            <tr>
+                                <td>
+                                    <a href='https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins'>
+                                        <img class='logo' src='images/logo_head.png'>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href='https://wiki.jenkins-ci.org/display/JENKINS/Meet+Jenkins'>
+                                        <div class='title'>
+                                            Meet Jenkins
+                                        </div>
+                                        <div class='description'>
+                                            Find out what Jenkins is and get started.
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='https://wiki.jenkins-ci.org/display/JENKINS/Use+Jenkins'>
+                                        <img class='logo' src='images/user.gif'>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href='https://wiki.jenkins-ci.org/display/JENKINS/Use+Jenkins'>
+                                        <div class='title'>
+                                            Use Jenkins
+                                        </div>
+                                        <div class='description'>
+                                            See how to get more out of your Jenkins
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='https://wiki.jenkins-ci.org/display/JENKINS/Plugins'>
+                                        <img class='logo' src='images/plugin.png'>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href='https://wiki.jenkins-ci.org/display/JENKINS/Plugins'>
+                                        <div class='title'>
+                                            Customize Jenkins
+                                        </div>
+                                        <div class='description'>
+                                            Choose from hundreds of plugins to customize Jenkins to suit your needs
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href='https://wiki.jenkins-ci.org/display/JENKINS/Extend+Jenkins'>
+                                        <img class='logo' src='images/developer.gif'>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href='https://wiki.jenkins-ci.org/display/JENKINS/Extend+Jenkins'>
+                                        <div class='title'>
+                                            Extend Jenkins
+                                        </div>
+                                        <div class='description'>
+                                            Learn how to build or extend Jenkins by writing plugins
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style='padding-top: 3em; text-align: right;'>
+                        <a href='https://wiki.jenkins-ci.org/display/JENKINS/Awards'>
+                            Awards
+                        </a>
+                        <img src='images/award.png' style='vertical-align: middle;'>
+                    </div>
+                </div>
+
+                <div id='content-bottom'>
+                </div>
+            </div>
+
+            <!-- starting partial footer.html.haml -->
+            <script>
+                !function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+            </script>
+
+            <!-- ending partial footer.html.haml -->
+            <div id='github'>
+                <a href='https://github.com/jenkins-infra/jenkins.io/edit/master/content//index.html.haml'
+                   title='Edit /index.html.haml on GitHub'>
+                    [Improve this page]
+                </a>
+                &nbsp;
+                <a href='https://github.com/jenkins-infra/jenkins.io/commits/master/content//index.html.haml'
+                   title='View /index.html.haml history on GitHub'>
+                    [Page history]
+                </a>
+            </div>
+</body>
+</html>
