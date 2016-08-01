@@ -331,6 +331,41 @@ Windows
     <img alt='Fork us on GitHub' src='images/forkme_right_red_aa0000.png' style='position: absolute; top: 0; right: 0; border: 0;'>
   </a>
 </div>
+<script>
+    $(function () {
+        function doPopovers(){
+            var $popovers = $('#ji-download [data-toggle="popover"]');
+            var $popLayer = $('#popover-layer');
+            if ($popovers.length > 0){
+
+                $('body').click(function(e){
+                    var $target =  $(e.target);
+                    console.log('toggle?');
+                    if($target.closest($popovers).length === 1){
+                        console.log($target);
+                        $popovers.popover('show');
+                    }
+                    else if($target.closest('.popover').length === 0 )
+                        $popovers.popover('hide');
+                });
+
+                if($popLayer.length < 1)
+                    $popLayer = $('<div/>').appendTo('body').addClass('popover-layer').attr('id','popover-layer');
+                $popovers.popover({
+                    container: '#popover-layer',
+                    trigger:'manual',
+                    template:'<div class="popover download-options" role="tooltip"><div class="popover-arrow"></div><div class="popover-content"></div></div>',
+                    placement:'top',
+                    content:function(){
+                        return $(this).next().html();
+                    },
+                    html:true
+                });
+            }
+        }
+        doPopovers();
+    })
+</script>
 <div class='carousel slide' data-ride='carousel' id='ji-home-carousel'>
   <div id='ji-download'>
     <button aria-expanded='false' aria-haspopup='true' class='btn-lg btn btn-primary' data-toggle='popover' id='download-banner-btn'>
