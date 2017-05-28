@@ -1,7 +1,8 @@
 CACHE MANIFEST
-# 2017-05-06:v1
+# 2017-05-28:v1
 
 CACHE:
+404.html
 index.html
 assets/bower/bootstrap/css/bootstrap.css
 assets/bower/bootstrap/css/bootstrap.css.map
@@ -34,6 +35,7 @@ images/226px-Jenkins_logo.svg.png
 images/blueocean/blueocean-successful-pipeline.png
 images/by-sa-4.0-88x31.png
 images/conferences/jenkinsworld_jumbotron_faded.png
+images/fire-jenkins.svg.png
 images/forkme_right_red_aa0000.png
 images/full-pipeline.jpg
 images/sponsors/cloudbees.png
