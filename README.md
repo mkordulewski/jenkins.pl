@@ -1,6 +1,6 @@
 # Jenkins.pl
 
 * Polish Jenkins website:
-  * http://jenkins.pl/
+  * https://jenkins.pl/
 * Based on main Jenkins website:
   * https://jenkins.io/
